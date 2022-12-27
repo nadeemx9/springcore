@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--Student student1 = new Student();-->
+    <bean class="com.mycompany.Student" id="student1">
+        <!--Injecting Literal Values (dependency).-->
+        <property name="rno" value="001"/>
+        <property name="nm" value="Nadeem"/>
+        <!--Injecting Reference Value (dependency).-->
+        <property name="c1" ref="cheatref"/>
+    </bean>
+
+    <bean class="com.mycompany.AnotherStudent" id="student2">
+        <!--Injecting Literal Values (dependency).-->
+        <property name="rno" value="002"/>
+        <property name="nm" value="Datta"/>
+        <!--Injecting Reference Value (dependency).-->
+        <property name="c1" ref="cheatref"/>
+
+    </bean>
+
+
+    <bean class="com.mycompany.Cheating" id="cheatref"></bean>
+</beans>
+
